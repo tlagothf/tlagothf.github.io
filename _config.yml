@@ -1,0 +1,25 @@
+title: "포트폴리오"
+name: "심해솔"
+description: "백엔드 개발자 포트폴리오"
+url: "https://tlagothf.github.io"
+
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+
+nav:
+  - title: "About"
+    url: /about/
+  - title: "Projects"
+    url: /projects/
+  - title: "Blog"
+    url: /posts/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
