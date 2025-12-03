@@ -1,0 +1,28 @@
+---
+title: "신규 서비스 인증 인프라 구축 (OAuth 기반 JWT)"
+excerpt: "OAuth 유형별 공통 인터페이스 + JWT 인증 구조 설계"
+layout: single
+---
+
+**기간:** 2025.07.28 ~ 2025.08.30  
+**소속:** 안전한 공간, 단독 담당:contentReference[oaicite:28]{index=28}  
+
+### 개요
+신규 서비스 런칭을 위해 OAuth 로그인과 JWT 토큰 체계를 표준화하고,  
+여러 서비스에서 재사용 가능한 인증 인프라를 구축한 프로젝트.
+
+### 역할 및 기여
+
+- OAuth 제공자(카카오, 구글 등) 유형별 인증 플로우 설계  
+- 공통 인터페이스 정의 및 확장 가능한 구조 설계  
+- JWT 발급·검증 로직 및 만료/리프레시 토큰 전략 수립  
+- Spring Boot 및 라이브러리 버전 업그레이드, 호환성 이슈 분석 및 해결:contentReference[oaicite:29]{index=29}  
+
+### 기술 스택
+
+`Java`, `Spring Boot`, `Spring Security`, `JWT`, `OAuth2`, `Gradle`, `Git`, `IntelliJ`
+
+### 성과
+
+- 프레임워크 버전업·호환성 이슈 해결을 통해 레거시 코드 분석 역량 향상  
+- 향후 서비스에서 재사용 가능한 인증 구조와 코드 자산 확보  
