@@ -8,12 +8,12 @@ title: "Skills"
 - **Java (Servlet / JSP)**  
   - 회원 관리, 로그인, 파일 처리 기능 구현  
   - HikariCP 기반 Connection Pool, MyBatis DAO · XML Mapper 설계  
-  - 전자정부프레임워크 환경에서 관리자 기능 단독 개발 경험:contentReference[oaicite:8]{index=8}  
+  - 전자정부프레임워크 환경에서 관리자 기능 단독 개발 경험
 
 - **Spring / Spring Boot**  
   - XML 기반 빈 설정 및 의존성 주입  
   - Spring MVC 구조 이해 및 Controller · Service 계층 개발  
-  - Spring Boot 버전 업그레이드 및 라이브러리 호환성 이슈 해결 경험:contentReference[oaicite:9]{index=9}  
+  - Spring Boot 버전 업그레이드 및 라이브러리 호환성 이슈 해결 경험
 
 ## AI · Data
 
@@ -21,13 +21,13 @@ title: "Skills"
 - TensorFlow, Keras, FastText, Gensim, Kiwi, KoNLPy  
 - LangChain + OpenAI GPT API를 활용한  
   - 문제은행 자동 생성 기능  
-  - 교육용 챗봇, 사용자 응답 흐름 설계 및 OutputParser 기반 구조화 응답 처리:contentReference[oaicite:10]{index=10}  
+  - 교육용 챗봇, 사용자 응답 흐름 설계 및 OutputParser 기반 구조화 응답 처리 
 
 ## Database
 
 - Oracle, MySQL, MS SQL Server, PostgreSQL  
 - Docker 기반 DB 컨테이너 운영  
-- 인덱스 설계, 기본적인 쿼리 튜닝 및 실행 계획 분석 경험:contentReference[oaicite:11]{index=11}  
+- 인덱스 설계, 기본적인 쿼리 튜닝 및 실행 계획 분석 경험
 
 ## Web
 
