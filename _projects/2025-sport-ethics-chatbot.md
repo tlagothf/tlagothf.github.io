@@ -5,7 +5,7 @@ layout: single
 ---
 
 **기간:** 2025.03.01 ~ 2025.07.15  
-**소속:** ㈜아이티원즈, 3인 팀:contentReference[oaicite:26]{index=26}  
+**소속:** ㈜아이티원즈, 3인 팀
 
 ### 개요
 웹페이지에서 사용자가 질문을 입력하면  
@@ -17,7 +17,7 @@ GPT 기반 AI가 실시간으로 답변하는 교육용 챗봇 시스템 개발.
 - GPT-4 API 연동 및 OutputParser로 응답을 구조화하여 UI에 안정적으로 출력  
 - Python Flask 기반 챗봇 API 서버 구성 및 Java(JSP)와 REST API 연동  
 - 사용자 질의·응답 로그를 Oracle / MySQL / MSSQL DB에 저장  
-- CORS, 응답 지연, 포맷 불일치 등 통신 이슈를 디버깅하고 안정화:contentReference[oaicite:27]{index=27}  
+- CORS, 응답 지연, 포맷 불일치 등 통신 이슈를 디버깅하고 안정화 
 
 ### 기술 스택
 
