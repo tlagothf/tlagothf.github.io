@@ -46,16 +46,6 @@ defaults:
       layout: single
       author_profile: false
 
-nav:
-  - title: "About"
-    url: /about/
-  - title: "Projects"
-    url: /projects/
-  - title: "Skills"
-    url: /skills/
-  - title: "Education"
-    url: /education/
-
 author:
   name: "심해솔"
   avatar: "/assets/images/profile.jpg"
