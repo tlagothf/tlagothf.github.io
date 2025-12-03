@@ -5,7 +5,7 @@ layout: single
 ---
 
 **기간:** 2025.01.06 ~ 2025.03.18  
-**소속:** ㈜아이티원즈:contentReference[oaicite:22]{index=22}  
+**소속:** ㈜아이티원즈
 
 ### 개요
 기존 학사관리 시스템을 리뉴얼하며, 관리자 기능과 파일 처리·보안 기능을 강화한 프로젝트.
@@ -17,7 +17,7 @@ layout: single
 - 파일 업로드/다운로드, 엑셀 다운로드 기능 구현 (Apache POI)  
 - 다운로드 파일 비밀번호 설정 및 암호화 처리  
 - 입력값 검증, 파일명 위조 방지, 접근 제어 등 보안 코딩 적용  
-- MyBatis DAO 작성 및 트랜잭션 처리:contentReference[oaicite:23]{index=23}  
+- MyBatis DAO 작성 및 트랜잭션 처리 
 
 ### 기술 스택
 
