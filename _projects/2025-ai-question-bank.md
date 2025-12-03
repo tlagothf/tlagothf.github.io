@@ -5,7 +5,7 @@ layout: single
 ---
 
 **기간:** 2025.03.01 ~ 2025.07.15  
-**소속:** ㈜아이티원즈, 3인 팀:contentReference[oaicite:24]{index=24}  
+**소속:** ㈜아이티원즈, 3인 팀
 
 ### 개요
 LMS 학사관리 시스템에서 교과 내용을 입력하면  
@@ -18,7 +18,7 @@ AI가 객관식·주관식 문제를 자동 생성해 문제은행에 저장하�
   - PromptTemplate로 문제 유형별 프롬프트 체계화  
   - OutputParser로 GPT 응답을 JSON 형태로 구조화  
 - Flask API 서버 구성 및 Java ↔ Python 연동 처리  
-- 생성된 문항을 MySQL 문제은행 테이블에 저장하고 관리자 검수 기능 제공:contentReference[oaicite:25]{index=25}  
+- 생성된 문항을 MySQL 문제은행 테이블에 저장하고 관리자 검수 기능 제공
 
 ### 기술 스택
 
