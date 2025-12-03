@@ -1,0 +1,28 @@
+---
+title: "Emotion Diary – 감정 다이어리 웹 애플리케이션"
+excerpt: "JSP 기반 감정 기록 및 일기 CRUD 웹 서비스"
+layout: single
+---
+
+**기간:** 2024.11.18 ~ 2024.12.13  
+**형태:** 3인 팀, 주요 기능 담당:contentReference[oaicite:20]{index=20}  
+
+### 목표
+사용자의 감정 데이터를 기록하고, 감정에 따른 일기 작성을 지원하는 반응형 웹 서비스 개발.
+
+### 역할 및 기여
+
+- MySQL 기반 DB 설계 및 테이블 구축  
+- 회원가입/로그인/정보수정 CRUD 기능 구현  
+- 감정 일기 작성·조회·수정·삭제 기능 구현  
+- MyBatis + HikariCP 기반 DB 연동 처리  
+- JSP + JavaScript로 클라이언트 유효성 검사(중복 확인, 비밀번호 확인 등) 구현:contentReference[oaicite:21]{index=21}  
+
+### 기술 스택
+
+`Java`, `JSP`, `MySQL`, `MyBatis`, `HikariCP`, `JavaScript`
+
+### 성과
+
+- 웹 애플리케이션을 처음부터 끝까지 설계·구현하며 전체 개발 프로세스를 체득  
+- 빌드 오류 및 Mapper 설정 이슈를 해결하는 과정에서 디버깅 역량과 자신감 향상  
