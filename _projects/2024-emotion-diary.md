@@ -5,7 +5,7 @@ layout: single
 ---
 
 **기간:** 2024.11.18 ~ 2024.12.13  
-**형태:** 3인 팀, 주요 기능 담당:contentReference[oaicite:20]{index=20}  
+**형태:** 3인 팀, 주요 기능 담당
 
 ### 목표
 사용자의 감정 데이터를 기록하고, 감정에 따른 일기 작성을 지원하는 반응형 웹 서비스 개발.
@@ -16,7 +16,7 @@ layout: single
 - 회원가입/로그인/정보수정 CRUD 기능 구현  
 - 감정 일기 작성·조회·수정·삭제 기능 구현  
 - MyBatis + HikariCP 기반 DB 연동 처리  
-- JSP + JavaScript로 클라이언트 유효성 검사(중복 확인, 비밀번호 확인 등) 구현:contentReference[oaicite:21]{index=21}  
+- JSP + JavaScript로 클라이언트 유효성 검사(중복 확인, 비밀번호 확인 등) 구현
 
 ### 기술 스택
 
