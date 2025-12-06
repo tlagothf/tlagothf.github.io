@@ -116,25 +116,30 @@ body {
 
 /* ===== Projects 카드 레이아웃 & 스타일 ===== */
 
-/* ===== Projects: 모바일 1열, 큰 화면 2열 ===== */
-
+/* .archive 자체는 기본 block 유지 */
 .layout--collection .archive {
-  display: grid;
-  grid-template-columns: 1fr;   /* 기본 1열 */
-  gap: 1.8rem;
+  display: block;
 }
 
-@media (min-width: 900px) {
-  .layout--collection .archive {
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* PC에서 2열 */
-  }
+/* 카드들을 감싸는 래퍼를 flex 그리드로 */
+.layout--collection .grid__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.9rem;
+  margin-right: -0.9rem;
 }
 
-/* grid item 정리 */
+/* 각 카드 셀 */
 .layout--collection .grid__item {
-  float: none !important;
-  width: 100% !important;
-  margin: 0;
+  padding: 0 0.9rem 1.8rem;
+  flex: 0 0 100%;     /* 기본: 1열 */
+}
+
+/* 화면 넓어지면 2열 */
+@media (min-width: 900px) {
+  .layout--collection .grid__item {
+    flex: 0 0 50%;
+  }
 }
 
 /* 카드 스타일 */
