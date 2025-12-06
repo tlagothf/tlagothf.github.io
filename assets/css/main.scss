@@ -25,21 +25,20 @@ body {
 }
 
 .masthead {
-  background-color: #1f2937; 
+  background-color: #0b1120;
   border-bottom: none;
 }
 
-.masthead__inner-wrap {
-  max-width: 1100px;
-}
-
 .masthead__menu-item a {
-  color: #e5e7eb;
   font-size: 0.95rem;
+  font-weight: 600;
 }
 
-.masthead__menu-item a:hover {
+.masthead__menu-item a:hover,
+.masthead__menu-item a:focus,
+.masthead__menu-item a:active {
   color: #ffffff;
+  background-color: rgba(37, 99, 235, 0.35);
 }
 
 .page__content p,
