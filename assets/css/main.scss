@@ -121,7 +121,8 @@ body {
   display: block;
 }
 
-/* 카드들을 감싸는 래퍼를 flex 그리드로 */
+/* 1) 카드들을 감싸는 래퍼 (entries / grid__wrapper 둘 다 대응) */
+.layout--collection .entries,
 .layout--collection .grid__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -129,20 +130,22 @@ body {
   margin-right: -0.9rem;
 }
 
-/* 각 카드 셀 */
-.layout--collection .grid__item {
+/* 2) 각 카드 셀 */
+.layout--collection .entries .grid__item,
+.layout--collection .grid__wrapper .grid__item {
   padding: 0 0.9rem 1.8rem;
-  flex: 0 0 100%;     /* 기본: 1열 */
+  flex: 0 0 100%;      /* 기본: 1열 */
 }
 
 /* 화면 넓어지면 2열 */
 @media (min-width: 900px) {
-  .layout--collection .grid__item {
+  .layout--collection .entries .grid__item,
+  .layout--collection .grid__wrapper .grid__item {
     flex: 0 0 50%;
   }
 }
 
-/* 카드 스타일 */
+/* 3) 카드 스타일 */
 .archive__item {
   background-color: #ffffff;
   border-radius: 16px;
@@ -176,6 +179,7 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 
 
 /* ===== Skill Cards ===== */
