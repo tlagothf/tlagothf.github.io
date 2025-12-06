@@ -5,6 +5,7 @@
 @import "minimal-mistakes/skins/air";
 @import "minimal-mistakes";
 
+/* 공통 기본 설정 */
 html {
   font-size: 18px;
 }
@@ -13,46 +14,38 @@ body {
   background-color: #f5f7fb;
 }
 
-.page,
-.layout--collection {
-  max-width: 1100px;
-  margin: 2rem auto 2.5rem;
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 2.5rem 2.5rem 3rem;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-}
-
-.layout--home {
-  max-width: none;
-  margin: 0;
-  background-color: transparent;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-/* 헤더 */
+/* =========================
+ * 1. 헤더 / 네비게이션 공통
+ * ========================= */
 .masthead,
-.masthead__inner-wrap,
-.masthead__menu {
+.masthead__inner-wrap {
   background-color: #0b1120 !important;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
-.site-title a {
+/* greedy-nav 전체를 네이비로 통일 */
+.greedy-nav,
+.greedy-nav .visible-links,
+.greedy-nav .hidden-links {
+  background-color: #0b1120 !important;
+  box-shadow: none !important;
+}
+
+/* 제목(Portfolio) */
+.greedy-nav .site-title,
+.greedy-nav .site-title a {
   color: #ffffff !important;
+  opacity: 1 !important;
   font-size: 1.1rem;
   font-weight: 700;
   padding: 1.1rem 1.6rem;
-  display: inline-block;
 }
 
-.site-title a:hover {
+.greedy-nav .site-title a:hover {
   color: #dbeafe !important;
 }
 
-/* 네비 메뉴 */
+/* 메뉴 */
 .masthead__menu-item a {
   color: #ffffff !important;
   font-size: 0.98rem;
@@ -65,20 +58,61 @@ body {
   color: #f9fafb !important;
 }
 
-/* 헤더 가운데 연한 박스(그리디 네비)까지 네이비로 통일 */
-.greedy-nav,
-.greedy-nav .visible-links,
-.greedy-nav .hidden-links {
-  background-color: #0b1120 !important;
-  box-shadow: none !important;
-}
-
-/* 그 안쪽 여백 때문에 연한 박스로 보이는 부분 제거 */
+/* 제목 부분 주변 여백/연한 박스 느낌 제거 */
 .greedy-nav .site-title,
 .greedy-nav .visible-links > li {
   margin: 0;
 }
 
+/* =========================
+ * 2. 페이지 레이아웃 카드화
+ *    (About / Skills / Education / Projects 모두)
+ * ========================= */
+
+/* Home만 전체폭, 나머지는 카드형 */
+.layout--home {
+  max-width: none;
+  margin: 0;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* 단일 페이지(About, Skills, Education) */
+.layout--single .page,
+/* 컬렉션 페이지(Projects) */
+.layout--collection .page {
+  max-width: 1100px;
+  margin: 2rem auto 2.5rem;     /* 가운데 정렬 */
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem 2.5rem 3rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  float: none;
+  width: 100%;
+}
+
+/* 컬렉션의 바깥 래퍼도 가운데 정렬 */
+.layout--collection .initial-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 사이드바 영역 제거 (오른쪽 빈 칸 방지) */
+.layout--single .sidebar,
+.layout--collection .sidebar {
+  display: none;
+}
+
+/* 안쪽 래퍼 여백 정리 */
+.layout--single .page__inner-wrap,
+.layout--collection .page__inner-wrap {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* 공통 본문 타이포 */
 .page__content p,
 .page__content li {
   line-height: 1.8;
@@ -91,45 +125,29 @@ body {
   font-weight: 700;
 }
 
-.author__bio {
-  display: none !important;
-}
-
+/* 프로필 박스 끄기 */
+.author__bio,
 .author__urls-wrapper {
   display: none !important;
 }
 
-/* 제목(Portfolio)도 메뉴와 완전히 같은 스타일로 맞추기 */
-.greedy-nav .site-title,
-.greedy-nav .site-title a {
-  color: #ffffff !important;
-  opacity: 1 !important;        /* 기본 스킨에서 반투명 처리한 걸 덮어쓰기 */
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 1.1rem 1.6rem;
-}
+/* =========================
+ * 3. Projects 페이지 카드 스타일
+ * ========================= */
 
-/* hover 효과도 메뉴와 비슷하게 */
-.greedy-nav .site-title a:hover {
-  color: #dbeafe !important;
-}
-
-/* ===== Projects 카드 레이아웃 & 스타일 ===== */
-
-/* 여러 칼럼으로 나누는 기본 그리드 레이아웃 끄기 */
+/* 기본 그리드 레이아웃 끄고 한 줄에 하나씩 */
 .grid__wrapper {
   display: block !important;
 }
 
-/* grid__item 하나당 한 줄 전체 쓰게 만들기 */
 .grid__item {
   float: none !important;
   width: 100% !important;
   max-width: none !important;
   margin-bottom: 1.5rem;
 }
-/* ===== Projects 카드 내 텍스트 정리 ===== */
 
+/* 카드 박스 */
 .archive__item {
   display: flex;
   flex-direction: column;
@@ -163,13 +181,14 @@ body {
   line-height: 1.6;
 }
 
-/* 그리드 간격 살짝만 넓히기 */
+/* 그리드 간격 */
 .archive {
   gap: 1.2rem;
 }
 
-
-/* ===== Skill Cards ===== */
+/* =========================
+ * 4. Skills 카드 스타일
+ * ========================= */
 
 .skill-card-wrap {
   display: grid;
