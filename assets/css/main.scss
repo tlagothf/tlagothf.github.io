@@ -221,3 +221,24 @@ body {
   color: #4b5563;
   margin: 0.2rem 0;
 }
+
+/* ===== 페이지 상단 흰 타이틀 바 제거 ===== */
+
+/* About / Skills / Education / Projects 공통 */
+.layout--single .page__header,
+.layout--collection .page__header {
+  background: transparent;   /* 흰 배경 제거 */
+  box-shadow: none;          /* 그림자 제거 */
+  border-radius: 0;          /* 둥근 모서리 제거 */
+  padding: 0;                /* 안쪽 여백 제거 */
+  margin: 0 0 1.8rem;        /* 아래쪽 여백만 살짝 */
+}
+
+/* h1 제목 자체도 카드처럼 안 보이게 */
+.layout--single .page__title,
+.layout--collection .page__title {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0 0 1.2rem;
+}
