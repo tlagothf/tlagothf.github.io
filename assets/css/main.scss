@@ -116,6 +116,18 @@ body {
 
 /* ===== Projects 카드 레이아웃 & 스타일 ===== */
 
+/* 여러 칼럼으로 나누는 기본 그리드 레이아웃 끄기 */
+.grid__wrapper {
+  display: block !important;
+}
+
+/* grid__item 하나당 한 줄 전체 쓰게 만들기 */
+.grid__item {
+  float: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin-bottom: 1.5rem;
+}
 /* ===== Projects 카드 내 텍스트 정리 ===== */
 
 .archive__item {
