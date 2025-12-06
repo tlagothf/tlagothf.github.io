@@ -116,72 +116,62 @@ body {
 
 /* ===== Projects 카드 레이아웃 & 스타일 ===== */
 
-/* Projects 리스트: 기본 1열, 큰 화면에서 2열 */
-.layout--collection .archive {
-  display: block;                /* 테마 기본 그리드/플로트 영향 제거 */
-}
+/* ===== Projects: 모바일 1열, 큰 화면 2열 ===== */
 
-.layout--collection .archive__item {
-  width: 100% !important;        /* 카드 하나가 컨테이너 전체 폭 사용 */
-  max-width: none !important;
-  margin-bottom: 1.5rem;
-}
-
-/* 카드 하나 */
-.archive__item {
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 1.6rem 1.7rem;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.archive__item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.16);
-}
-
-/* 제목 */
-.archive__item-title {
-  font-size: 1.02rem;
-  font-weight: 700;
-  margin-bottom: 0.45rem;
-  line-height: 1.4;
-}
-
-/* 요약 텍스트 */
-.archive__item-excerpt {
-  font-size: 0.9rem;
-  color: #4b5563;
-  line-height: 1.6;
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;      /* 최대 3줄까지만 보여주고 */
-  -webkit-box-orient: vertical;
-  overflow: hidden;           /* 그 이상은 잘라서 카드 높이 통일 */
-}
-
-.layout--collection .grid__item {
-  float: none !important;
-  display: block !important;
-  width: 100% !important;       /* 한 줄에 하나씩 전체 폭 사용 */
-  max-width: none !important;
-}
 .layout--collection .archive {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr;   /* 기본 1열 */
   gap: 1.8rem;
 }
 
 @media (min-width: 900px) {
   .layout--collection .archive {
-    grid-template-columns: 1fr 1fr; /* 2열 카드 */
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* PC에서 2열 */
   }
+}
+
+/* grid item 정리 */
+.layout--collection .grid__item {
+  float: none !important;
+  width: 100% !important;
+  margin: 0;
+}
+
+/* 카드 스타일 */
+.archive__item {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.6rem 1.7rem;
+  box-shadow: 0 10px 25px rgba(15,23,42,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.archive__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(15,23,42,0.16);
+}
+
+/* 제목 */
+.archive__item-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: .45rem;
+  line-height: 1.4;
+}
+
+/* 요약 */
+.archive__item-excerpt {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 
 /* ===== Skill Cards ===== */
 
