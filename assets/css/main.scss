@@ -116,6 +116,24 @@ body {
 
 /* ===== Projects 카드 레이아웃 & 스타일 ===== */
 
+/* 컬렉션(Projects) 페이지에서 테마의 그리드 레이아웃을 꺼버리기 */
+
+/* entries / grid__wrapper 래퍼는 그냥 block으로 */
+.layout--collection .entries,
+.layout--collection .grid__wrapper {
+  display: block !important;
+}
+
+/* 각 카드 셀(grid__item)을 한 줄에 하나, 전체 폭 사용하도록 */
+.layout--collection .entries .grid__item,
+.layout--collection .grid__wrapper .grid__item {
+  float: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 0 1.5rem;
+}
+
+/* 카드 자체 스타일 */
 .archive__item {
   background-color: #ffffff;
   border-radius: 16px;
@@ -148,19 +166,7 @@ body {
   overflow: hidden;
 }
 
-/* Projects: 카드 한 줄에 하나, 전체 폭 사용 */
 
-.layout--collection .archive {
-  display: block;
-}
-
-.layout--collection .archive__item {
-  width: 100% !important;      /* 부모 폭 전체 사용 */
-  max-width: none !important;
-  float: none !important;      /* 테마에서 걸어둔 float 제거 */
-  clear: both !important;
-  margin-bottom: 1.5rem;
-}
 
 /* ===== Skill Cards ===== */
 
