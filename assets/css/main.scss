@@ -91,13 +91,55 @@ body {
   display: none !important;
 }
 
-.masthead .site-title,
-.masthead .site-title a {
+/* 제목(Portfolio)도 메뉴와 완전히 같은 스타일로 맞추기 */
+.greedy-nav .site-title,
+.greedy-nav .site-title a {
   color: #ffffff !important;
+  opacity: 1 !important;        /* 기본 스킨에서 반투명 처리한 걸 덮어쓰기 */
   font-size: 1.1rem;
   font-weight: 700;
+  padding: 1.1rem 1.6rem;
 }
 
-.masthead .site-title a:hover {
-  color: #dbeafe !important;  /* hover 시 은은한 파랑 */
+/* hover 효과도 메뉴와 비슷하게 */
+.greedy-nav .site-title a:hover {
+  color: #dbeafe !important;
 }
+
+/* ===== Projects 카드 스타일 ===== */
+
+/* 프로젝트 카드 하나 */
+.archive__item {
+  background-color: #f9fafb;              /* 연한 회색 카드 배경 */
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  margin-bottom: 1.4rem;
+  height: 100%;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* 카드 hover 효과 */
+.archive__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+}
+
+/* 프로젝트 제목 */
+.archive__item-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+/* 부제/요약 부분 */
+.archive__item-excerpt {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* 그리드 간격 조금 넉넉하게 */
+.archive {
+  gap: 1.4rem;
+}
+
