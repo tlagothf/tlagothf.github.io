@@ -14,10 +14,10 @@ body {
 }
 
 .page,
-.archive,
-.layout--home {
-  max-width: 1100px;                 /* 전체 폭 제한 */
-  margin: 2rem auto 2.5rem;          /* 좌우 auto → 가운데 정렬 */
+.layout--home,
+.layout--collection {
+  max-width: 1100px;
+  margin: 2rem auto 2.5rem;   /* 좌우 auto → 가운데 정렬 */
   background-color: #ffffff;
   border-radius: 16px;
   padding: 2.5rem 2.5rem 3rem;
@@ -106,63 +106,60 @@ body {
   color: #dbeafe !important;
 }
 
-/* ===== Projects 카드 스타일 ===== */
+/* ===== Projects 카드 레이아웃 & 스타일 ===== */
 
-/* 프로젝트 카드 하나 */
+/* 그리드 레이아웃: 기본은 1열, 넓은 화면에서 2열 */
+.archive {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+}
+
+@media (min-width: 900px) {
+  .archive {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 카드 하나 */
 .archive__item {
-  background-color: #f9fafb;              /* 연한 회색 카드 배경 */
-  border-radius: 14px;
-  padding: 1.4rem 1.6rem;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
-  margin-bottom: 1.4rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.6rem 1.7rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
   height: 100%;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-/* 카드 hover 효과 */
-.archive__item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
-}
-
-/* 프로젝트 제목 */
-.archive__item-title {
-  font-size: 1.02rem;
-  font-weight: 700;
-  margin-bottom: 0.35rem;
-}
-
-/* 부제/요약 부분 */
-.archive__item-excerpt {
-  font-size: 0.9rem;
-  color: #4b5563;
-}
-
-.archive__item {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+.archive__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.16);
+}
+
+/* 제목 */
 .archive__item-title {
-  font-size: 1rem;
+  font-size: 1.02rem;
   font-weight: 700;
-  margin-bottom: 0.4rem;
-  line-height: 1.45;
+  margin-bottom: 0.45rem;
+  line-height: 1.4;
 }
 
+/* 요약 텍스트 */
 .archive__item-excerpt {
-  margin-top: 0.2rem;
-  font-size: 0.87rem;
-  line-height: 1.55;
+  font-size: 0.9rem;
   color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;      /* 최대 3줄까지만 보여주고 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;           /* 그 이상은 잘라서 카드 높이 통일 */
 }
 
-/* 그리드 간격 조금 넉넉하게 */
-.archive {
-  gap: 1.4rem;
-}
 
 /* ===== Skill Cards ===== */
 
