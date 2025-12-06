@@ -117,22 +117,14 @@ body {
 /* ===== Projects 카드 레이아웃 & 스타일 ===== */
 
 /* Projects 리스트: 기본 1열, 큰 화면에서 2열 */
-.grid__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -0.8rem;
-  margin-right: -0.8rem;
+.layout--collection .archive {
+  display: block;                /* 테마 기본 그리드/플로트 영향 제거 */
 }
 
-.grid__item {
-  flex: 0 0 100%;
-  padding: 0.8rem;
-}
-
-@media (min-width: 900px) {
-  .grid__item {
-    flex: 0 0 50%;   /* 화면 넓으면 2열 */
-  }
+.layout--collection .archive__item {
+  width: 100% !important;        /* 카드 하나가 컨테이너 전체 폭 사용 */
+  max-width: none !important;
+  margin-bottom: 1.5rem;
 }
 
 /* 카드 하나 */
