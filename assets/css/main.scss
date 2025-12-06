@@ -16,12 +16,12 @@ body {
 .page,
 .archive,
 .layout--home {
+  max-width: 1100px;                 /* 전체 폭 제한 */
+  margin: 2rem auto 2.5rem;          /* 좌우 auto → 가운데 정렬 */
   background-color: #ffffff;
   border-radius: 16px;
   padding: 2.5rem 2.5rem 3rem;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-  margin-top: 2rem;
-  margin-bottom: 2.5rem;
 }
 
 /* 헤더 */
@@ -135,6 +135,27 @@ body {
 /* 부제/요약 부분 */
 .archive__item-excerpt {
   font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.archive__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.archive__item-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.45;
+}
+
+.archive__item-excerpt {
+  margin-top: 0.2rem;
+  font-size: 0.87rem;
+  line-height: 1.55;
   color: #4b5563;
 }
 
