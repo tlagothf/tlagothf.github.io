@@ -90,3 +90,14 @@ body {
 .author__urls-wrapper {
   display: none !important;
 }
+
+.masthead .site-title,
+.masthead .site-title a {
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.masthead .site-title a:hover {
+  color: #dbeafe !important;  /* hover 시 은은한 파랑 */
+}
