@@ -57,6 +57,20 @@ body {
   color: #f9fafb !important;
 }
 
+/* 헤더 가운데 연한 박스(그리디 네비)까지 네이비로 통일 */
+.greedy-nav,
+.greedy-nav .visible-links,
+.greedy-nav .hidden-links {
+  background-color: #0b1120 !important;
+  box-shadow: none !important;
+}
+
+/* 그 안쪽 여백 때문에 연한 박스로 보이는 부분 제거 */
+.greedy-nav .site-title,
+.greedy-nav .visible-links > li {
+  margin: 0;
+}
+
 .page__content p,
 .page__content li {
   line-height: 1.8;
