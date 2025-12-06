@@ -24,21 +24,41 @@ body {
   margin-bottom: 2.5rem;
 }
 
+/* 왼쪽 상단 사이트 제목(심해솔 포트폴리오) 숨기기 */
+.site-title {
+  display: none;
+}
+
+/* 헤더 전체 배경 네이비 */
 .masthead {
-  background-color: #0b1120;
+  background-color: #0b1120; /* 진한 남색 */
   border-bottom: none;
 }
 
-.masthead__menu-item a {
-  font-size: 0.95rem;
-  font-weight: 600;
+/* 메뉴 바를 한 줄 네이비로 보이게 */
+.masthead__inner-wrap {
+  max-width: 1100px;
 }
 
+.masthead__menu {
+  background: transparent;
+}
+
+/* 네비 항목: 배경 네이비, 글자 흰색 */
+.masthead__menu-item a {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 600;
+  padding: 1.1rem 1.6rem;
+}
+
+/* hover 시 약간만 강조 */
 .masthead__menu-item a:hover,
 .masthead__menu-item a:focus,
 .masthead__menu-item a:active {
-  color: #ffffff;
-  background-color: rgba(37, 99, 235, 0.35);
+  background-color: #111827;
+  color: #f9fafb;
 }
 
 .page__content p,
@@ -53,6 +73,12 @@ body {
   font-weight: 700;
 }
 
-.site-title {
-  display: none;
+/* 자기소개(한 줄 설명) 숨기기 */
+.author__bio {
+  display: none !important;
+}
+
+/* 위치 / GitHub / Email 아이콘 묶음 숨기기 */
+.author__urls-wrapper {
+  display: none !important;
 }
