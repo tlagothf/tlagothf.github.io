@@ -116,14 +116,14 @@ body {
 /* ===== Projects 카드 레이아웃 & 스타일 ===== */
 
 /* 그리드 레이아웃: 기본은 1열, 넓은 화면에서 2열 */
-.archive {
+.grid__wrapper {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.6rem;
 }
 
 @media (min-width: 900px) {
-  .archive {
+  .grid__wrapper {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
