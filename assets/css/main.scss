@@ -138,8 +138,9 @@ body {
 /* Projects 컬렉션 그리드 컨테이너 */
 .layout--collection .grid__wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  /* 카드 폭을 넓게: 데스크탑에서 보통 2~3개 정도 */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
   margin: 0;
   padding: 0;
 }
@@ -148,15 +149,18 @@ body {
 .layout--collection .grid__item {
   list-style: none;
   margin: 0;
+  /* 카드가 같은 높이로 늘어나도록 flex 컨테이너 */
+  display: flex;
 }
 
 /* 카드 박스 */
 .layout--collection .archive__item {
+  flex: 1; /* grid__item 안에서 높이 꽉 채움 */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 100%;
+
   background: #ffffff;
   border-radius: 16px;
   padding: 1.5rem 1.4rem;
@@ -173,21 +177,27 @@ body {
 .layout--collection .archive__item-title {
   font-size: 0.98rem;
   font-weight: 700;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.45rem;
   line-height: 1.4;
 }
 
-/* 카드 요약 텍스트 */
+/* 카드 요약 텍스트: 3줄까지만 보이게 */
 .layout--collection .archive__item-excerpt {
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   color: #4b5563;
   line-height: 1.6;
+  margin-top: 0.2rem;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;        /* 최대 3줄 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* 작은 화면에서 간격/패딩 살짝 조정 */
+/* 작은 화면에서 간격/패딩 조정 */
 @media (max-width: 768px) {
   .layout--collection .grid__wrapper {
-    gap: 1.1rem;
+    gap: 1.2rem;
   }
 
   .layout--collection .archive__item {
