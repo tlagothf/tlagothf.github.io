@@ -85,13 +85,6 @@ author_profile: false
 }
 </style>
 
-<nav class="hidden-portfolio-nav">
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-</nav>
-
 <section id="about">
 
 # Data Analysis Portfolio
