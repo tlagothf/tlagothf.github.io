@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Data Analysis Portfolio"
-permalink: /zepeto-analysis/
+permalink: /data-portfolio/
 author_profile: false
 ---
 
