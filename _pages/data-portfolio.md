@@ -6,18 +6,32 @@ author_profile: false
 ---
 
 <style>
-/* 기존 포트폴리오 헤더/네비 숨김 */
+/* 기존 포트폴리오 헤더/네비/자동 제목 숨김 */
 .masthead,
 .greedy-nav,
 .author__avatar,
 .author__content,
-.author__urls-wrapper {
+.author__urls-wrapper,
+.page__title {
   display: none !important;
 }
 
-/* Minimal Mistakes 자동 페이지 제목 숨김 */
-.page__title {
-  display: none !important;
+/* 기존 포트폴리오의 page 카드 스타일 제거 */
+.page {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Minimal Mistakes 내부 여백 초기화 */
+.page__inner-wrap,
+.page__content {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* 전체 배경 */
@@ -25,13 +39,13 @@ body {
   background: #f5f7fb;
 }
 
-/* 페이지 카드 */
-.page {
-  max-width: 980px !important;
-  margin: 3rem auto !important;
+/* 이 숨김 포트폴리오 전용 카드 */
+.data-page {
+  max-width: 980px;
+  margin: 3rem auto;
   background: #ffffff;
   border-radius: 22px;
-  padding: 3rem !important;
+  padding: 3rem;
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
 }
 
@@ -39,7 +53,6 @@ body {
 .data-hero {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 2rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid #e5e7eb;
@@ -76,7 +89,6 @@ body {
   color: #0b1120 !important;
 }
 
-/* 섹션 공통 */
 .section-block {
   margin-top: 3rem;
 }
@@ -93,7 +105,6 @@ body {
   color: #374151;
 }
 
-/* 카드 그리드 */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -121,7 +132,6 @@ body {
   color: #4b5563;
 }
 
-/* 기술 배지 */
 .badge-wrap {
   margin-top: 1rem;
 }
@@ -137,7 +147,6 @@ body {
   font-weight: 700;
 }
 
-/* 프로젝트 박스 */
 .project-box {
   margin-top: 1.4rem;
   padding: 1.5rem 1.6rem;
@@ -170,7 +179,6 @@ body {
   color: #374151;
 }
 
-/* 마지막 연락처 박스 */
 .contact-box {
   margin-top: 3rem;
   padding: 1.5rem;
@@ -188,11 +196,10 @@ body {
   font-weight: 700;
 }
 
-/* 모바일 대응 */
 @media (max-width: 720px) {
-  .page {
-    margin: 1.5rem !important;
-    padding: 2rem 1.5rem !important;
+  .data-page {
+    margin: 1.5rem;
+    padding: 2rem 1.5rem;
   }
 
   .data-hero {
