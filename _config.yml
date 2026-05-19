@@ -46,6 +46,9 @@ defaults:
       layout: single
       author_profile: false
 
+  - include:
+       - _pages
+
 author:
   name: "심해솔"
   avatar: "/assets/images/profile.jpg"
